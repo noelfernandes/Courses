@@ -34,7 +34,11 @@ namespace MicroRabbit.Infrastructure.Bus
         public void Publish<T>(T @event) where T : Event
         {
             var factory = new ConnectionFactory() {
-                HostName = "192.168.1.147"
+                HostName = "192.168.1.147",
+                UserName = "rabbit-user",
+                Password = "rabbit-1234",
+                VirtualHost = "/",
+                Port = AmqpTcpEndpoint.UseDefaultPort
             };
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
