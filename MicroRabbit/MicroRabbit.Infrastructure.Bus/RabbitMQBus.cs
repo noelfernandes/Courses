@@ -54,7 +54,6 @@ namespace MicroRabbit.Infrastructure.Bus
             }
         }
 
-
         public void Subscribe<T, THandler>()
             where T : Event
             where THandler : IEventHandler<T>
