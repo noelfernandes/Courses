@@ -22,7 +22,7 @@ namespace MicroRabbit.Banking.Application.Services
 
         public IEnumerable<Account> GetAccounts()
         {
-            return AccountRepository.Getaccounts();
+            return AccountRepository.GetAccounts();
         }
 
         public void Transfer(AccountTransfer accountTransfer)

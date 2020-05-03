@@ -15,7 +15,7 @@ namespace MicroRabbit.Banking.Data.Repository
             Context = context;
         }
 
-        public IEnumerable<Account> Getaccounts()
+        public IEnumerable<Account> GetAccounts()
         {
             return Context.Accounts;
         }
